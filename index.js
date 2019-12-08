@@ -18,7 +18,11 @@ const app = new Vue({
     el: '#app',
     // インスタンスにアクセスできる
     data: {
-        comments: []
+        comments: [],
+        currentPostId: 1
+    },
+    computed: {
+        displayComments: vue => vue.comments.filter(comment => comment.postId === parseInt(vue.currentPostId))
     },
     mounted() {
         fetch('https://jsonplaceholder.typicode.com/comments')

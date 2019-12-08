@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
 </head>
 <body>
     <div id="app">
-        <comment v-for="comment in comments" v-bind="comment"></comment>
+        <input type="number" v-model="currentPostId">
+        <comment v-for="comment in comments" v-bind="comment" v-bind:key="comment.id"></comment>
     </div>
     <script src="./index.js"></script>
 </body>
