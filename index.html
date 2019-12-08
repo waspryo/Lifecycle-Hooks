@@ -11,8 +11,14 @@
 <body>
     <div id="app">
         <input type="number" v-model="currentPostId">
-        <comment v-for="comment in comments" v-bind="comment" v-bind:key="comment.id"></comment>
+        <comment v-for="comment in displayComments" v-bind="comment" v-bind:key="comment.id"></comment>
     </div>
     <script src="./index.js"></script>
+
+    <style>
+        .comment {
+            background-color:greenyellow;
+        }
+    </style>
 </body>
 </html>
