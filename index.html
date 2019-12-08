@@ -8,7 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <comment v-for="comment in comments" v-bind="comment"></comment>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
